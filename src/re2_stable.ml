@@ -1,7 +1,8 @@
 open! Core.Core_stable
 
 module V1 = struct
-  include Make_stable.Of_stable_format.V1
+  include
+    Make_stable.Of_stable_format.V1
       (String.V1)
       (struct
         type t = Re2.t
